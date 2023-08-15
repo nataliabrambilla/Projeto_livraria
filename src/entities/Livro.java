@@ -94,7 +94,13 @@ public class Livro {
 
 	@Override
 	public String toString() {
-		return id.getId() + " | " + nome + " | " + autor + " | " + genero + " | " + numPaginas + " | " + isStatus();
+		String textoStatus;
+		if (status == true) {
+			textoStatus = "Disponível";
+		} else {
+			textoStatus = "Alugado";
+		}
+		return "ID: " + id.getId() + " | " + nome + " | " + autor + " | " + genero + " | " + numPaginas + " | " + textoStatus;
 	}
 	
 }
